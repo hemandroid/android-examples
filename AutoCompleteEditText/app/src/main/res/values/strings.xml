@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AutoCompleteEditText</string>
+
+    <string-array name="countries">
+        <item>Arabia</item>
+        <item>Austria</item>
+        <item>Australia</item>
+        <item>Auckland</item>
+        <item>Amazon</item>
+        <item>Bangkok</item>
+        <item>Germany</item>
+        <item>India</item>
+        <item>Ireland</item>
+        <item>Finland</item>
+        <item>Denmark</item>
+        <item>Sweden</item>
+        <item>Switzerland</item>
+        <item>SouthAmerica</item>
+        <item>Canada</item>
+        <item>Mexico</item>
+    </string-array>
+
+
+</resources>
