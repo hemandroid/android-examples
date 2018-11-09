@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">RecyclerviewList</string>
+    <string name="dummytext">DummyText</string>
+</resources>

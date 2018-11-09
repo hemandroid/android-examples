@@ -1,0 +1,35 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 26
+    dataBinding{
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "github.hemandroid.service"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.android.support:appcompat-v7:$supportLibVer"
+    implementation "com.android.support:design:$supportLibVer"
+    implementation "com.android.support.constraint:constraint-layout:$constraint_LayoutVer"
+    implementation "com.android.support:support-v4:$supportLibVer"
+    testImplementation "junit:junit:$jUnitVer"
+    compile "com.android.support:support-annotations:$supportAnnotationsVer"
+    androidTestImplementation "com.android.support.test:runner:$testRunnerVer"
+    androidTestImplementation "com.android.support.test.espresso:espresso-core:$espressoCoreVer"
+
+}

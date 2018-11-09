@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    dataBinding {
+        enabled = true
+    }
+    defaultConfig {
+        applicationId "github.hemandroid.recyclerviewlist"
+        minSdkVersion 19
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+/** We are adding the dependency library version code from build.gradle(Project) file using ext
+ * By adding version number in this way, we can easily update all the supporting library
+ * version codes with the same value. This process is also comes under code optimization technique*/
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:' + rootProject.supportLibVer
+    implementation 'com.android.support.constraint:constraint-layout:' + rootProject.constraint_LayoutVer
+    testImplementation 'junit:junit:' + rootProject.jUnitVer
+    androidTestImplementation 'com.android.support.test:runner:' + rootProject.testRunnerVer
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:' + rootProject.espressoCoreVer
+    implementation 'com.android.support:recyclerview-v7:' + rootProject.supportLibVer
+}
